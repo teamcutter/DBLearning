@@ -6,8 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
-//Dao - "прослойка" между БД и программой
-// содержит методы для доступа к БД
+//Dao - "прослойка" между БД и программой, содержит методы для доступа к БД
 @Dao
 interface UserDao {
 
