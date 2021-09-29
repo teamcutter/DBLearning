@@ -11,10 +11,9 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.dblearning.R
-import com.example.dblearning.data.User
-import com.example.dblearning.data.UserViewModel
+import com.example.dblearning.model.User
+import com.example.dblearning.viewmodel.UserViewModel
 import com.example.dblearning.databinding.FragmentAddBinding
-import org.w3c.dom.Text
 
 class AddFragment : Fragment() {
 
@@ -24,7 +23,7 @@ class AddFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddBinding.inflate(layoutInflater)
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)

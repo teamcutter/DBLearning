@@ -1,6 +1,8 @@
-package com.example.dblearning.data
+package com.example.dblearning.repository
 
 import androidx.lifecycle.LiveData
+import com.example.dblearning.data.UserDao
+import com.example.dblearning.model.User
 
 // repo class abstracts access to multiple data sources.
 // the repo is not a part of the Architecture Components libraries,
@@ -12,5 +14,9 @@ class UserRepository(private val userDao: UserDao) {
 
     suspend fun addUser(user: User) {
         userDao.addUser(user)
+    }
+
+    suspend fun updateUser(user: User) {
+        userDao.updateUser(user)
     }
 }

@@ -2,6 +2,10 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id  'kotlin-kapt'
+    // For @Parcelize
+    id 'kotlin-parcelize'
+    // For safeargs and DirectionClasses
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
