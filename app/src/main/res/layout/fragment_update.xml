@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.add.AddFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.update.UpdateFragment"
     android:padding="24dp">
 
-
     <EditText
-        android:id="@+id/editTextFirstname"
+        android:id="@+id/updateTextFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -22,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextLastName"
+        android:id="@+id/updateTextLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -32,10 +31,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFirstname" />
+        app:layout_constraintTop_toBottomOf="@+id/updateTextFirstName" />
 
     <EditText
-        android:id="@+id/editTextAge"
+        android:id="@+id/updateTextAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -45,16 +44,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/updateTextLastName" />
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/update_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Add"
+        android:text="Update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAge" />
+        app:layout_constraintTop_toBottomOf="@+id/updateTextAge" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

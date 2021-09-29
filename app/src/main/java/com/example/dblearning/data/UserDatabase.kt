@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.dblearning.model.User
 
 // contains the database holder and servers as the main access point for the underlying
 // connection to your app's persisted, relational data

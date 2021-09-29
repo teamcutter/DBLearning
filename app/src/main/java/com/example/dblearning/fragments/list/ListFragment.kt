@@ -9,9 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.dblearning.R
-import com.example.dblearning.data.UserViewModel
+import com.example.dblearning.viewmodel.UserViewModel
 import com.example.dblearning.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
@@ -23,7 +22,7 @@ class ListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentListBinding.inflate(layoutInflater)
 
         // Recyclerview

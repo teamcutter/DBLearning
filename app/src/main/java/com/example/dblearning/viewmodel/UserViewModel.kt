@@ -1,9 +1,12 @@
-package com.example.dblearning.data
+package com.example.dblearning.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.dblearning.data.UserDatabase
+import com.example.dblearning.repository.UserRepository
+import com.example.dblearning.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -25,6 +28,12 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         // Dispatchers.IO - means we want to run this code in the background thread
         viewModelScope.launch(Dispatchers.IO){
             repository.addUser(user)
+        }
+    }
+
+    fun updateUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateUser(user)
         }
     }
 }
