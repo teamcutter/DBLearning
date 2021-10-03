@@ -19,3 +19,16 @@ data class User(
     val lastName: String,
     val age: Int
 ) : Parcelable
+
+// @Embedded позволяет нам представить экземпляр другого класса, который является свойством данного
+// класса, как свойства данного класса в таблице БД
+// например: data class Person(
+// val name: String,
+// @Embedded
+// val address: Address <-- БД видит как val streetName: String, val streetNumber: Int
+// )
+
+// data class Address(
+// val streetName: String,
+// val streetNumber: Int
+// )
