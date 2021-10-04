@@ -65,16 +65,12 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
-        if(query != null) {
-            searchDatabase(query)
-        }
+        if(query != null) searchDatabase(query)
         return true
     }
 
     override fun onQueryTextChange(query: String?): Boolean {
-        if(query != null) {
-            searchDatabase(query)
-        }
+        if(query != null) searchDatabase(query)
         return true
     }
 
