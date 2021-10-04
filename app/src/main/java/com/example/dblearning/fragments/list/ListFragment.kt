@@ -1,9 +1,9 @@
 package com.example.dblearning.fragments.list
 
-import android.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import android.os.Bundle
 import android.view.*
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -60,17 +60,21 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         val searchView = search.actionView as? SearchView
 
         // showing a submit button when query is non-empty
-        searchView?.isSubmitButtonEnabled = true
+        searchView?.isSubmitButtonEnabled = false
         searchView?.setOnQueryTextListener(this)
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
-        if(query != null) searchDatabase(query)
+        if(query != null) {
+            searchDatabase(query)
+        }
         return true
     }
 
     override fun onQueryTextChange(query: String?): Boolean {
-        if(query != null) searchDatabase(query)
+        if(query != null) {
+            searchDatabase(query)
+        }
         return true
     }
 
@@ -101,7 +105,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         // % % - is using for format our query to database query (it is required by database)
         val searchQuery = "%$query%"
 
-        mUserViewModel.searchDatabase(searchQuery).observe(viewLifecycleOwner, Observer { list ->
+        mUserViewModel.searchDatabase(searchQuery).observe(this, { list ->
             list.let{
                 adapter.setData(it)
             }
