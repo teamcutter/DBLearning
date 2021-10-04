@@ -32,3 +32,6 @@ data class User(
 // val streetName: String,
 // val streetNumber: Int
 // )
+
+// @TypeConverter
+// https://www.youtube.com/watch?v=adGU0A80EJ0&list=PLSrm9z4zp4mEPOfZNV9O-crOhoMa0G2-o&index=7
