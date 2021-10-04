@@ -79,6 +79,7 @@ class UpdateFragment : Fragment() {
         inflater.inflate(R.menu.delete_menu, menu)
         val searchItem = menu.findItem(R.id.menu_search)
         searchItem.isVisible = false
+        searchItem.actionView = null
     }
 
     // handle clicks
