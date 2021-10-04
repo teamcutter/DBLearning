@@ -37,7 +37,6 @@ class UpdateFragment : Fragment() {
 
         // Add menu
         setHasOptionsMenu(true)
-
         return binding.root
     }
 
@@ -78,6 +77,8 @@ class UpdateFragment : Fragment() {
     // inflate layout for our menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.delete_menu, menu)
+        val searchItem = menu.findItem(R.id.menu_search)
+        searchItem.isVisible = false
     }
 
     // handle clicks

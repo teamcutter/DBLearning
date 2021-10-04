@@ -14,7 +14,7 @@ import com.example.dblearning.R
 import com.example.dblearning.viewmodel.UserViewModel
 import com.example.dblearning.databinding.FragmentListBinding
 
-class ListFragment : Fragment(), SearchView.OnQueryTextListener {
+class ListFragment : Fragment(), SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
     private lateinit var binding: FragmentListBinding
     private lateinit var mUserViewModel: UserViewModel
@@ -62,6 +62,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         // showing a submit button when query is non-empty
         searchView?.isSubmitButtonEnabled = true
         searchView?.setOnQueryTextListener(this)
+        searchView?.setOnCloseListener(this)
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
@@ -106,5 +107,10 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
                 adapter.setData(it)
             }
         })
+    }
+
+    override fun onClose(): Boolean {
+        Toast.makeText(requireContext(), "Clicked.", Toast.LENGTH_LONG).show()
+        return true
     }
 }
