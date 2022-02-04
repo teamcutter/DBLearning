@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(findNavController(R.id.fragment))
     }
 
-    // таким образом стрелочка, которая возвращает нас обратно в fragmentlist работает
+    // таким образом стрелочка, которая возвращает нас обратно в fragmentList работает
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragment)
         return navController.navigateUp() || super.onSupportNavigateUp()
